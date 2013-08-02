@@ -1,0 +1,132 @@
+@import "compass/css3";
+
+* {
+  text-transform: capitalize;
+  @include box-sizing(content-box);
+}
+
+.game-boy{
+}
+
+.boitier {
+  width: 400px;
+  margin: 0 auto;
+  background: lighten(gray,45%);
+  @include border-radius(10px 10px 50px 10px);
+}
+
+.screen-container {
+  width: 370px;
+  margin: 10px auto;
+  @include border-radius(10px 10px 30px 10px);
+  background: gray;
+  color: white;
+  border: 1px solid black;
+  &:after {
+	content: '';
+	display: block;
+	clear:both;
+	overflow: hidden;
+  }
+}
+
+.screen-technology {
+  text-align: center;
+}
+
+.battery-container,
+.screen {
+  float: left;
+}
+
+.battery-container {
+  margin-top: 50px;
+}
+
+.battery-led{
+  margin:0 auto;
+  width: 10px;
+  height: 10px;
+  @include border-radius(10px);
+  background: red;
+}
+
+.battery-label{
+  margin:2px;
+}
+
+.screen {
+  width: 250px;
+  height: 250px;
+  background: green;
+  border:2px solid black;
+  margin: 5px 40px 20px 10px;
+}
+
+.console-name {
+  font-weight: bold;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
+.controls-top {
+  &:after {
+	clear: both;
+	content: '';
+	overflow: hidden;
+	display: block;
+  }
+}
+
+.arrows,
+.controls-buttons {
+  width: 50%;
+  float:left;
+}
+
+.arrows {
+  //background: blue;
+}
+
+.button-up,
+.button-down {
+  background: black;
+  width: 25px;
+  height: 25px;
+  display: block;
+}
+
+.button-a,
+.button-b {
+  display: block;
+  width: 30px;
+  height: 30px;
+  @include border-radius(30px);
+  background: #fa3243;
+}
+
+.select-container,
+.start-container {
+  width: 50px;
+  margin: 0;
+}
+
+.select-button,
+.start-button {
+  width: 40px;
+  height: 10px;
+  @include rotate(340deg);
+  @include border-radius(10px);
+  background: gray;
+}
+
+.start-container {
+  //margin-left: 100px;
+}
+
+.select-label,
+.start-label {
+  margin: 0;
+  text-indent: 5px;
+  @include rotate(340deg);
+}
